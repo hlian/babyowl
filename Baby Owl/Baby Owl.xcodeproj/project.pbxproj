@@ -11,6 +11,8 @@
 		3F6C8C8F1C025CA100E0BBED /* TimelineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C8C8E1C025CA100E0BBED /* TimelineVC.swift */; };
 		3F6C8C911C025D4D00E0BBED /* TimelineVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C8C901C025D4D00E0BBED /* TimelineVM.swift */; };
 		3F6C8C931C02648F00E0BBED /* TimelineNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C8C921C02648F00E0BBED /* TimelineNC.swift */; };
+		3F6C8C951C02904600E0BBED /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C8C941C02904600E0BBED /* TweetCell.swift */; };
+		3F6C8C971C02996100E0BBED /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C8C961C02996100E0BBED /* Utils.swift */; };
 		3FEE5F451C0248C700FF4E16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEE5F441C0248C700FF4E16 /* AppDelegate.swift */; };
 		3FEE5F4D1C0248C700FF4E16 /* Baby_Owl.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FEE5F4B1C0248C700FF4E16 /* Baby_Owl.xcdatamodeld */; };
 		3FEE5F4F1C0248C700FF4E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FEE5F4E1C0248C700FF4E16 /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		3F6C8C8E1C025CA100E0BBED /* TimelineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineVC.swift; sourceTree = "<group>"; };
 		3F6C8C901C025D4D00E0BBED /* TimelineVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineVM.swift; sourceTree = "<group>"; };
 		3F6C8C921C02648F00E0BBED /* TimelineNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineNC.swift; sourceTree = "<group>"; };
+		3F6C8C941C02904600E0BBED /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		3F6C8C961C02996100E0BBED /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3FEE5F411C0248C700FF4E16 /* Baby Owl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby Owl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FEE5F441C0248C700FF4E16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FEE5F4C1C0248C700FF4E16 /* Baby_Owl.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Baby_Owl.xcdatamodel; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 				3F6C8C8E1C025CA100E0BBED /* TimelineVC.swift */,
 				3F6C8C901C025D4D00E0BBED /* TimelineVM.swift */,
 				3F6C8C921C02648F00E0BBED /* TimelineNC.swift */,
+				3F6C8C941C02904600E0BBED /* TweetCell.swift */,
+				3F6C8C961C02996100E0BBED /* Utils.swift */,
 			);
 			path = "Baby Owl";
 			sourceTree = "<group>";
@@ -240,11 +246,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F6C8C8C1C02509F00E0BBED /* TBC.swift in Sources */,
+				3F6C8C951C02904600E0BBED /* TweetCell.swift in Sources */,
 				3F6C8C931C02648F00E0BBED /* TimelineNC.swift in Sources */,
 				3FEE5F4D1C0248C700FF4E16 /* Baby_Owl.xcdatamodeld in Sources */,
 				3F6C8C911C025D4D00E0BBED /* TimelineVM.swift in Sources */,
 				3FEE5F451C0248C700FF4E16 /* AppDelegate.swift in Sources */,
 				3F6C8C8F1C025CA100E0BBED /* TimelineVC.swift in Sources */,
+				3F6C8C971C02996100E0BBED /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,23 +6,21 @@
 //  Copyright © 2015 Grumble & Homework, Inc. All rights reserved.
 //
 
-let CGSomeRect = CGRectMake(0, 0, 500, 500)
-
+import ReactiveCocoa
 
 private func makeCollectionViewWithLayout(l: UICollectionViewLayout) -> UICollectionView {
-    let v = UICollectionView(frame: CGSomeRect, collectionViewLayout: l)
+    let v = ReasonableCollectionView(frame: CGSomeRect, collectionViewLayout: l)
+    v.delaysContentTouches = false
     v.backgroundColor = UIColor(red:0.995, green:0.98, blue:0.95, alpha:1.0)
     return v
 }
 
 private func makeLayout() -> UICollectionViewLayout {
     let l = UICollectionViewFlowLayout()
-    l.minimumLineSpacing = 0
+    l.minimumLineSpacing = 10
     l.minimumInteritemSpacing = 0
     return l
 }
-
-private var token: dispatch_once_t = 0
 
 class TimelineVC: UIViewController, UICollectionViewDelegateFlowLayout {
     class func make() -> TimelineVC {
@@ -32,7 +30,10 @@ class TimelineVC: UIViewController, UICollectionViewDelegateFlowLayout {
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         viewModel = TimelineVM()
+        tapGesture = UITapGestureRecognizer(target: nil, action: nil)
         super.init(nibName: nil, bundle: nil)
+
+        prepareTapGesture()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -48,6 +49,8 @@ class TimelineVC: UIViewController, UICollectionViewDelegateFlowLayout {
         viewModel.registerWithCollectionView(v)
         view = v
         collectionView = v
+
+        collectionView.addGestureRecognizer(tapGesture)
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -61,9 +64,37 @@ class TimelineVC: UIViewController, UICollectionViewDelegateFlowLayout {
     }
 
     let viewModel: TimelineVM
+    let tapGesture: UITapGestureRecognizer
     var collectionView: UICollectionView!
+    var selectedIndexPath: NSIndexPath?
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(collectionView.frame.width, 100)
+        let blueprints = viewModel.tweets[indexPath.row].1(collectionView.frame.width)
+        return CGSizeMake(collectionView.frame.width, self.selectedIndexPath == indexPath ? 200 : blueprints.totalHeight)
+    }
+}
+
+extension TimelineVC {
+    func prepareTapGesture() {
+        tapGesture.rac_gestureSignal().toSignalProducer()
+            .map { [unowned self] _ in self.tapGesture.state }
+            .filter { state in state == .Ended }
+            .filter { [weak self] _ in self != nil }
+            .startWithNext {
+                [unowned self] _ in
+                if let path = self.collectionView.indexPathForItemAtPoint(self.tapGesture.locationInView(self.collectionView)) {
+                    self.didTapPath(path)
+                }
+            }
+    }
+
+    func didTapPath(path: NSIndexPath) {
+        beginTweetCellAnimation()
+        self.collectionView.performBatchUpdates({
+            self.selectedIndexPath = (path == self.selectedIndexPath ? nil : path)
+        }) {
+            _ in
+            endTweetCellAnimation()
+        }
     }
 }

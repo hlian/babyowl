@@ -9,57 +9,27 @@
 import Foundation
 import PureLayout
 
-extension UIView {
-    func debug() {
-        self.layer.borderColor = UIColor.redColor().CGColor
-        self.layer.borderWidth = 1
-    }
-
-    func autoAddSubview(subview: UIView) {
-        subview.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(subview)
-    }
-}
-
-class TweetCell: UICollectionViewCell {
-    override init(frame: CGRect) {
-        label = UILabel(frame: frame)
-        super.init(frame: frame)
-
-        autoAddSubview(label)
-        label.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsMake(0, 10, 0, 10))
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    var tweetCM: String? {
-        didSet {
-            label.text = tweetCM ?? ""
-        }
-    }
-
-    let label: UILabel
+private func m(s: String) -> (Tweet, CGFloat -> TweetBlueprints) {
+    let t = Tweet(avatarURL: NSURL(string: "www.google.com")!, name: "shark twain", username: "haoformayor", tweet: s)
+    let blueprints = bluePrintsOfTweet(t, sheet: tweetStylesheet)
+    return (t, blueprints)
 }
 
 class TimelineDataSource: NSObject, UICollectionViewDataSource {
     unowned let vm: TimelineVM
-    let tweets: [String]
 
     init(vm: TimelineVM) {
         self.vm = vm
-        self.tweets = ["hello", "goodbye", "lorem", "ipsum", "scroll", "down", "burma", "shave"]
     }
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tweets.count
+        return vm.tweets.count
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("tweet cell", forIndexPath: indexPath) as! TweetCell
-        cell.tweetCM = tweets[indexPath.row]
-        cell.debug()
+        cell.tweet = vm.tweets[indexPath.row].0
+        cell.blueprints = vm.tweets[indexPath.row].1(collectionView.frame.width)
         return cell
     }
 
@@ -67,8 +37,10 @@ class TimelineDataSource: NSObject, UICollectionViewDataSource {
 
 class TimelineVM {
     var dataSource: UICollectionViewDataSource!
+    let tweets: [(Tweet, CGFloat -> TweetBlueprints)]
 
     init() {
+        tweets = [m("hello"), m("goodbye"), m("lorem"), m("ipsum"), m("scroll"), m("down"), m("burma"), m("shave")]
         dataSource = TimelineDataSource(vm: self)
     }
 
