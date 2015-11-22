@@ -1,0 +1,6 @@
+framework module Localize_Swift {
+  umbrella header "Pods-Baby Owl-Localize-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
