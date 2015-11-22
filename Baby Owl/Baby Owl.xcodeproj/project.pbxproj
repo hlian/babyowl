@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F6C8C8C1C02509F00E0BBED /* TBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C8C8B1C02509F00E0BBED /* TBC.swift */; };
+		3F6C8C8F1C025CA100E0BBED /* TimelineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C8C8E1C025CA100E0BBED /* TimelineVC.swift */; };
+		3F6C8C911C025D4D00E0BBED /* TimelineVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C8C901C025D4D00E0BBED /* TimelineVM.swift */; };
+		3F6C8C931C02648F00E0BBED /* TimelineNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C8C921C02648F00E0BBED /* TimelineNC.swift */; };
+		3FEE5F451C0248C700FF4E16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEE5F441C0248C700FF4E16 /* AppDelegate.swift */; };
+		3FEE5F4D1C0248C700FF4E16 /* Baby_Owl.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FEE5F4B1C0248C700FF4E16 /* Baby_Owl.xcdatamodeld */; };
+		3FEE5F4F1C0248C700FF4E16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FEE5F4E1C0248C700FF4E16 /* Assets.xcassets */; };
+		3FEE5F521C0248C700FF4E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEE5F501C0248C700FF4E16 /* LaunchScreen.storyboard */; };
+		CFC3C36C073854554B3DB8EB /* Pods_Baby_Owl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CA6320C91CD0DB420C610F /* Pods_Baby_Owl.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		08A5891CBF222B3DBE6DE966 /* Pods-Baby Owl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baby Owl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Baby Owl/Pods-Baby Owl.debug.xcconfig"; sourceTree = "<group>"; };
+		3F6C8C891C024F9000E0BBED /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3F6C8C8A1C024FA700E0BBED /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		3F6C8C8B1C02509F00E0BBED /* TBC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBC.swift; sourceTree = "<group>"; };
+		3F6C8C8E1C025CA100E0BBED /* TimelineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineVC.swift; sourceTree = "<group>"; };
+		3F6C8C901C025D4D00E0BBED /* TimelineVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineVM.swift; sourceTree = "<group>"; };
+		3F6C8C921C02648F00E0BBED /* TimelineNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineNC.swift; sourceTree = "<group>"; };
+		3FEE5F411C0248C700FF4E16 /* Baby Owl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby Owl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FEE5F441C0248C700FF4E16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3FEE5F4C1C0248C700FF4E16 /* Baby_Owl.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Baby_Owl.xcdatamodel; sourceTree = "<group>"; };
+		3FEE5F4E1C0248C700FF4E16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FEE5F511C0248C700FF4E16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3FEE5F531C0248C700FF4E16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CFB5A880222D25F85692D8F /* Pods-Baby Owl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baby Owl.release.xcconfig"; path = "Pods/Target Support Files/Pods-Baby Owl/Pods-Baby Owl.release.xcconfig"; sourceTree = "<group>"; };
+		B3CA6320C91CD0DB420C610F /* Pods_Baby_Owl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Baby_Owl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FEE5F3E1C0248C700FF4E16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFC3C36C073854554B3DB8EB /* Pods_Baby_Owl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32FF6FFC44887E62A4A44C98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3CA6320C91CD0DB420C610F /* Pods_Baby_Owl.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F6C8C881C024F7800E0BBED /* Sundries */ = {
+			isa = PBXGroup;
+			children = (
+				3FEE5F531C0248C700FF4E16 /* Info.plist */,
+				3F6C8C891C024F9000E0BBED /* PrefixHeader.pch */,
+				3FEE5F501C0248C700FF4E16 /* LaunchScreen.storyboard */,
+				3F6C8C8A1C024FA700E0BBED /* Bridge.h */,
+			);
+			name = Sundries;
+			sourceTree = "<group>";
+		};
+		3F6C8C8D1C0252F300E0BBED /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				3FEE5F4B1C0248C700FF4E16 /* Baby_Owl.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		3FEE5F381C0248C700FF4E16 = {
+			isa = PBXGroup;
+			children = (
+				3FEE5F431C0248C700FF4E16 /* Baby Owl */,
+				3FEE5F421C0248C700FF4E16 /* Products */,
+				D225CD9E25EB99DE44421DF1 /* Pods */,
+				32FF6FFC44887E62A4A44C98 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3FEE5F421C0248C700FF4E16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FEE5F411C0248C700FF4E16 /* Baby Owl.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FEE5F431C0248C700FF4E16 /* Baby Owl */ = {
+			isa = PBXGroup;
+			children = (
+				3F6C8C8D1C0252F300E0BBED /* Core Data */,
+				3F6C8C881C024F7800E0BBED /* Sundries */,
+				3FEE5F441C0248C700FF4E16 /* AppDelegate.swift */,
+				3FEE5F4E1C0248C700FF4E16 /* Assets.xcassets */,
+				3F6C8C8B1C02509F00E0BBED /* TBC.swift */,
+				3F6C8C8E1C025CA100E0BBED /* TimelineVC.swift */,
+				3F6C8C901C025D4D00E0BBED /* TimelineVM.swift */,
+				3F6C8C921C02648F00E0BBED /* TimelineNC.swift */,
+			);
+			path = "Baby Owl";
+			sourceTree = "<group>";
+		};
+		D225CD9E25EB99DE44421DF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08A5891CBF222B3DBE6DE966 /* Pods-Baby Owl.debug.xcconfig */,
+				4CFB5A880222D25F85692D8F /* Pods-Baby Owl.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FEE5F401C0248C700FF4E16 /* Baby Owl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FEE5F561C0248C700FF4E16 /* Build configuration list for PBXNativeTarget "Baby Owl" */;
+			buildPhases = (
+				A19AFD4C8FF955D3D3410699 /* Check Pods Manifest.lock */,
+				3FEE5F3D1C0248C700FF4E16 /* Sources */,
+				3FEE5F3E1C0248C700FF4E16 /* Frameworks */,
+				3FEE5F3F1C0248C700FF4E16 /* Resources */,
+				0DFD1AB4FA1A54E119CA77F7 /* Embed Pods Frameworks */,
+				129041EC0CC14F00B245FB0B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Baby Owl";
+			productName = "Baby Owl";
+			productReference = 3FEE5F411C0248C700FF4E16 /* Baby Owl.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FEE5F391C0248C700FF4E16 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Grumble & Homework, Inc.";
+				TargetAttributes = {
+					3FEE5F401C0248C700FF4E16 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = Z4L59FC4GF;
+					};
+				};
+			};
+			buildConfigurationList = 3FEE5F3C1C0248C700FF4E16 /* Build configuration list for PBXProject "Baby Owl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FEE5F381C0248C700FF4E16;
+			productRefGroup = 3FEE5F421C0248C700FF4E16 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FEE5F401C0248C700FF4E16 /* Baby Owl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FEE5F3F1C0248C700FF4E16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FEE5F521C0248C700FF4E16 /* LaunchScreen.storyboard in Resources */,
+				3FEE5F4F1C0248C700FF4E16 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DFD1AB4FA1A54E119CA77F7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Baby Owl/Pods-Baby Owl-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		129041EC0CC14F00B245FB0B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Baby Owl/Pods-Baby Owl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A19AFD4C8FF955D3D3410699 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FEE5F3D1C0248C700FF4E16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F6C8C8C1C02509F00E0BBED /* TBC.swift in Sources */,
+				3F6C8C931C02648F00E0BBED /* TimelineNC.swift in Sources */,
+				3FEE5F4D1C0248C700FF4E16 /* Baby_Owl.xcdatamodeld in Sources */,
+				3F6C8C911C025D4D00E0BBED /* TimelineVM.swift in Sources */,
+				3FEE5F451C0248C700FF4E16 /* AppDelegate.swift in Sources */,
+				3F6C8C8F1C025CA100E0BBED /* TimelineVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3FEE5F501C0248C700FF4E16 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FEE5F511C0248C700FF4E16 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FEE5F541C0248C700FF4E16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3FEE5F551C0248C700FF4E16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FEE5F571C0248C700FF4E16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08A5891CBF222B3DBE6DE966 /* Pods-Baby Owl.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = "Baby Owl/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.haolian.Baby-Owl";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Baby Owl/Bridge.h";
+			};
+			name = Debug;
+		};
+		3FEE5F581C0248C700FF4E16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CFB5A880222D25F85692D8F /* Pods-Baby Owl.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = "Baby Owl/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.haolian.Baby-Owl";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Baby Owl/Bridge.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FEE5F3C1C0248C700FF4E16 /* Build configuration list for PBXProject "Baby Owl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FEE5F541C0248C700FF4E16 /* Debug */,
+				3FEE5F551C0248C700FF4E16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FEE5F561C0248C700FF4E16 /* Build configuration list for PBXNativeTarget "Baby Owl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FEE5F571C0248C700FF4E16 /* Debug */,
+				3FEE5F581C0248C700FF4E16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3FEE5F4B1C0248C700FF4E16 /* Baby_Owl.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3FEE5F4C1C0248C700FF4E16 /* Baby_Owl.xcdatamodel */,
+			);
+			currentVersion = 3FEE5F4C1C0248C700FF4E16 /* Baby_Owl.xcdatamodel */;
+			path = Baby_Owl.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3FEE5F391C0248C700FF4E16 /* Project object */;
+}
