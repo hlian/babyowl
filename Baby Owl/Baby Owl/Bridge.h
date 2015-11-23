@@ -11,5 +11,8 @@
 
 @import UIKit;
 @import Localize_Swift;
+@import Alamofire;
+#import "CommonCrypto/CommonHMAC.h"
+#import "Utils.h"
 
 #endif /* Bridge_h */

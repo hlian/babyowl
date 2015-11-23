@@ -22,6 +22,12 @@ private func makeLayout() -> UICollectionViewLayout {
     return l
 }
 
+private func makeConfiguration() -> NSURLSessionConfiguration {
+    let config = NSURLSessionConfiguration.ephemeralSessionConfiguration()
+    config.HTTPAdditionalHeaders = ["user-agent": "baby owl 1.0"]
+    return config
+}
+
 class TimelineVC: UIViewController, UICollectionViewDelegateFlowLayout {
     class func make() -> TimelineVC {
         let vc = TimelineVC(nibName: nil, bundle: nil)
@@ -31,6 +37,7 @@ class TimelineVC: UIViewController, UICollectionViewDelegateFlowLayout {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         viewModel = TimelineVM()
         tapGesture = UITapGestureRecognizer(target: nil, action: nil)
+        OAuth = OAuthManager(mgr: manager)
         super.init(nibName: nil, bundle: nil)
 
         prepareTapGesture()
@@ -53,8 +60,11 @@ class TimelineVC: UIViewController, UICollectionViewDelegateFlowLayout {
         collectionView.addGestureRecognizer(tapGesture)
     }
 
+    let manager = Manager(configuration: makeConfiguration())
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        OAuth.go()
     }
 
     override func viewDidLayoutSubviews() {
@@ -66,6 +76,7 @@ class TimelineVC: UIViewController, UICollectionViewDelegateFlowLayout {
     let viewModel: TimelineVM
     let tapGesture: UITapGestureRecognizer
     var collectionView: UICollectionView!
+    let OAuth: OAuthManager
     var selectedIndexPath: NSIndexPath?
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
